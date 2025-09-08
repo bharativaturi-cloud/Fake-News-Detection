@@ -6,7 +6,7 @@ import joblib
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 # Load the trained model
-model = joblib.load('/content/fake_news_model.pkl')
+model = joblib.load('fake_news_model.pkl')
 
 st.title("📰 Fake News Detector")
 
