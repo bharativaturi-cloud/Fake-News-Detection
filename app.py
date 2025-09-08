@@ -47,7 +47,7 @@ if uploaded_file:
     if 'text' in df.columns:
         df['processed_text'] = df['text'].astype(str).apply(preprocess_text)
         predictions = model.predict(df['processed_text'])
-        probs = model.predict_proba(df['processed_text'])gi
+        probs = model.predict_proba(df['processed_text'])
 
         df['prediction'] = [p.upper() for p in predictions]
         df['confidence'] = (probs.max(axis=1) * 100).round(2)
